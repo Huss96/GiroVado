@@ -16,14 +16,14 @@ import java.sql.*;
 public class DBConnection {
     private Connection connection;
     private Statement statement;
-    private static String user = "Saeed@serverhuss";
-    private static String email = "prosaeed96@gmail.com";
-    private static String password = "HussNaiN96";
+    private static String user = "serverName";  //dati modificati per git
+    private static String email = "email";
+    private static String password = "password";
     DBConnection() throws SQLException, ClassNotFoundException{
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-        String url = "jdbc:jtds:sqlserver://serverhuss.database.windows.net:1433;DatabaseName=myGiroVadoDatabase;user=Saeed@serverhuss;password=HussNaiN96;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+        String url = "string di accesso al db";
         connection = DriverManager.getConnection(url, user, password);
         statement = connection.createStatement();
     }
